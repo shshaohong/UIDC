@@ -38,7 +38,7 @@ public class QitaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_qita, container, false);
         ButterKnife.bind(this, view);
 
-        List<Dish> list = DbUtils.getDishList(6);
+        List<Dish> list = DbUtils.getDishList(5);
         adapter = new DishAdapter(getContext());
         mManager = new GridLayoutManager(getContext(), 3);
 

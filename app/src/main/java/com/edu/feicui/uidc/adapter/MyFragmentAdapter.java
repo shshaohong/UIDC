@@ -35,6 +35,11 @@ public class MyFragmentAdapter extends FragmentPagerAdapter {
                 return new GengduoFragment();
             case 4:
                 return new DingdanFragment();
+            case 5:
+                return new DingdanFragment();
+            case 6:
+                return new DingdanFragment();
+
             default:
                 throw new RuntimeException("未知错误");
 
@@ -44,6 +49,6 @@ public class MyFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return 7;
     }
 }

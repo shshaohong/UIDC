@@ -63,9 +63,9 @@
                     />
                 <ImageView
                     android:id="@+id/shezhi"
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
                     android:src="@drawable/selector_image_gengduo"
                     />
             </LinearLayout>
@@ -88,7 +88,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="3dp"
                     android:gravity="center_vertical"
                     >
 
@@ -147,7 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:text="订单号："
                     android:textSize="12dp"
                     android:textColor="@color/text_color"
@@ -169,6 +169,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:layout_marginTop="3dp"
             android:background="#444"
             />
         <LinearLayout
@@ -316,7 +317,7 @@
                         android:id="@+id/tv_dingdan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="订单：5"
+                        android:text="订单"
                         android:textColor="@drawable/selector_text_color"
                         android:layout_marginTop="5dp"
                         />

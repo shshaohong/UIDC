@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:orientation="horizontal"
-        android:background="#7e6b5a"
+        android:background="@drawable/text_title_2"
         android:gravity="center_vertical"
         >
         <TextView
@@ -69,19 +69,165 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         />
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rl_jindu"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="3dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="柠檬烤鸡"
+                android:textSize="@dimen/textSize_12"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jindutiao_40"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="40%"
+                android:textSize="@dimen/textSize_12"
+                android:gravity="right"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:background="#ccc"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="3dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="麻辣香锅"
+                android:textSize="@dimen/textSize_12"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jindutiao_80"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="80%"
+                android:textSize="@dimen/textSize_12"
+                android:gravity="right"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:background="#ccc"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="3dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="酸菜鱼"
+                android:textSize="@dimen/textSize_12"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jindutiao_100"
+                android:layout_gravity="center_horizontal"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="20dp"
+                android:paddingLeft="110dp"
+                android:src="@drawable/jindu_wancheng"
+                android:gravity="right"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:background="#ccc"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="3dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="红烧排骨"
+                android:textSize="@dimen/textSize_12"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jindutiao_80"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="80%"
+                android:textSize="@dimen/textSize_12"
+                android:gravity="right"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:background="#ccc"/>
+    </LinearLayout>
+
+
+
+    <Space
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        >
-
-    </android.support.v7.widget.RecyclerView>
-    <View
+        />
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:background="#7e6b5a"
+        android:layout_height="28dp"
+        android:background="@drawable/text_bottom_long"
         />
 </LinearLayout>

@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.edu.feicui.uidc.R;
@@ -58,6 +59,14 @@ public class HomeActivity extends FragmentActivity {
     LinearLayout llDishShow;
     @BindView(R.id.ll_gengduo_show)
     LinearLayout llGengduoShow;
+
+    @BindView(R.id.tv_gengduo_chakan)
+    TextView tvChakan;
+    @BindView(R.id.tv_gengduo_huantai)
+    TextView tvHuantai;
+    @BindView(R.id.tv_gengduo_shujugengxin)
+    TextView tvShuju;
+
 
 
 
@@ -126,7 +135,9 @@ public class HomeActivity extends FragmentActivity {
             llJindu.setSelected(position == 1);
             llJiezhang.setSelected(position == 2);
             llGengduo.setSelected(position == 3);
-            llDingdan.setSelected(position == 4);
+            tvChakan.setSelected(position == 4);
+            tvChakan.setSelected(position == 5);
+            llDingdan.setSelected(position == 6);
         }
 
         @Override
@@ -184,8 +195,11 @@ public class HomeActivity extends FragmentActivity {
     }
 
     //左边功能栏的点击事件
-    @OnClick({R.id.ll_caipin, R.id.ll_jindu,
-            R.id.ll_jiezhang, R.id.ll_gengduo, R.id.ll_dingdan})
+    @OnClick({R.id.ll_caipin, R.id.ll_jindu, R.id.ll_jiezhang,
+            R.id.ll_gengduo, R.id.ll_dingdan,
+            R.id.tv_gengduo_huantai,R.id.tv_gengduo_shujugengxin
+
+    })
     public void onClickGongneng(LinearLayout layout) {
 
         switch (layout.getId()) {
@@ -221,13 +235,20 @@ public class HomeActivity extends FragmentActivity {
                 mViewPager2.setVisibility(View.VISIBLE);
                 mViewPager2.setCurrentItem(3, false);
                 break;
+            case R.id.tv_gengduo_huantai:
+                mViewPager2.setCurrentItem(4,false);
+                break;
+            case R.id.tv_gengduo_shujugengxin:
+                mViewPager2.setCurrentItem(5,false);
+                break;
+
             case R.id.ll_dingdan:
                 hideGandD();
                 setSelectedFormDish();
                 llDingdan.setSelected(true);
                 mViewPager.setVisibility(View.GONE);
                 mViewPager2.setVisibility(View.VISIBLE);
-                mViewPager2.setCurrentItem(4, false);
+                mViewPager2.setCurrentItem(6, false);
                 break;
         }
 
@@ -280,5 +301,6 @@ public class HomeActivity extends FragmentActivity {
         mOutFragment.show(getSupportFragmentManager(),"aa");
 
     }
+
 }
 

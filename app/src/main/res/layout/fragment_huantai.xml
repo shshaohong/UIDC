@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@drawable/huantai"
+    >
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2.4"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1.2"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical"
+            >
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="22dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="原台号："
+                    android:textColor="#716254"
+                    />
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="bottom"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="101"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#716254"
+                        />
+                    <view
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#000"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="22dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="现台号："
+                    android:textColor="#716254"
+                    />
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="bottom"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="102"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#716254"
+                        />
+                    <view
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#000"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22dp"
+                android:gravity="center_horizontal"
+                >
+                <Button
+                    android:id="@+id/btn_huantai"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:text="换台"
+                    android:background="@drawable/btn_huantai"
+                    android:textColor="#fff"
+                    />
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btn_bingtai"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:text="并台"
+                    android:background="@drawable/btn_huantai"
+                    android:textColor="#fff"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

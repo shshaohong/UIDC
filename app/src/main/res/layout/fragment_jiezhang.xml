@@ -2,19 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+    >
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_weight="5"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/circle_background"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:orientation="horizontal"
-            android:background="#7e6b5a"
+            android:background="@drawable/text_title_2"
             android:gravity="center_vertical"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
@@ -56,6 +57,8 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:orientation="horizontal"
+            android:background="#fff"
+
             >
             <TextView
                 android:layout_width="0dp"
@@ -71,6 +74,7 @@
                 android:layout_weight="1.5"
                 android:layout_height="match_parent"
                 android:text="菜名"
+                android:textSize="@dimen/textSize_12"
                 android:background="#f9f9f9"
                 android:gravity="center"
                 />
@@ -110,26 +114,97 @@
                 />
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#ccc"
             />
-        <android.support.v7.widget.RecyclerView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal"
+            android:background="#fff"
+
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:textSize="@dimen/textSize_12"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="match_parent"
+                android:text="红烧排骨"
+                android:background="#f9f9f9"
+                android:textSize="@dimen/textSize_12"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="62"
+                android:textSize="@dimen/textSize_12"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:gravity="center"
+                android:textSize="@dimen/textSize_12"
+                android:background="#f9f9f9"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textSize="@dimen/textSize_12"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="match_parent"
+                android:text="62"
+                android:textSize="@dimen/textSize_12"
+                android:gravity="center"
+                android:background="#f9f9f9"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#eee"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#eee"
+            />
+        <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            >
-
-        </android.support.v7.widget.RecyclerView>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="#7e6b5a"
+            android:background="#fff"
             />
-
-
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="@drawable/text_bottom_short"
+            />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_weight="1"
