@@ -8,14 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.edu.feicui.uidc.R;
 import com.edu.feicui.uidc.entity.Dish;
-import com.edu.feicui.uidc.entity.MessageEvent;
+import com.edu.feicui.uidc.fragment.XiangqingFragment;
 import com.edu.feicui.uidc.url.Url;
 import com.squareup.picasso.Picasso;
-
-import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +28,9 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.myViewHolder> 
     private Context mContext;
     private LayoutInflater inflater;
     private List<Dish> mList;
-    private OnRecyclerViewItemClickListener mOnRecyclerViewItemClickListener;
+
+
+    private XiangqingFragment mXiangqingFragment;
 
     public DishAdapter(Context context) {
         mList = new ArrayList<>();
@@ -51,11 +52,12 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.myViewHolder> 
     public myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.fragmeng_list_item, parent, false);
         myViewHolder holder = new myViewHolder(view);
+
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(final myViewHolder holder, int position) {
+    public void onBindViewHolder(final myViewHolder holder, final int position) {
         final Dish dishEntity = mList.get(position);
 
         holder.tvNum.setText(dishEntity.getPrice());
@@ -63,15 +65,24 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.myViewHolder> 
 
         Picasso.with(mContext).load(Url.BASE_URL + dishEntity.getImgPath()).into(holder.ivIcon);
         Log.e("aaa", dishEntity.getImgPath());
+        holder.ivIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mOnRecyclerViewItemClickListener != null) {
+                    mOnRecyclerViewItemClickListener.onItemClickListener(holder.ivIcon,position);
+                }
+
+            }
+        });
         holder.BtnAddDish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                MessageEvent event = new MessageEvent();
-                event.setType(MessageEvent.TYPE_A);
-                event.setDish(dishEntity);
-                EventBus.getDefault().post(event);
-                holder.BtnAddDish.setSelected(true);
+                Toast.makeText(mContext, "点菜成功", Toast.LENGTH_SHORT).show();
+//                MessageEvent event = new MessageEvent();
+//                event.setType(MessageEvent.TYPE_A);
+//                event.setDish(dishEntity);
+//                EventBus.getDefault().post(event);
+//                holder.BtnAddDish.setSelected(true);
             }
         });
     }
@@ -81,17 +92,19 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.myViewHolder> 
         return mList.size();
     }
 
-    public void setOnItemClickListener(
-            OnRecyclerViewItemClickListener listener) {
-        this.mOnRecyclerViewItemClickListener = listener;
-    }
+    private OnRecyclerViewItemClickListener mOnRecyclerViewItemClickListener;
+
+
 
     public interface OnRecyclerViewItemClickListener {
 
         void onItemClickListener(View view, int data);
 
-        void onItemViewClickListener(View view, int data);
+    }
 
+    public void setOnItemClickListener(
+            OnRecyclerViewItemClickListener listener) {
+        this.mOnRecyclerViewItemClickListener = listener;
     }
 
     class myViewHolder extends RecyclerView.ViewHolder {

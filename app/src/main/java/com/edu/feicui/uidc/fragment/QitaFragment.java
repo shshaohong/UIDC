@@ -30,6 +30,7 @@ public class QitaFragment extends Fragment {
     RecyclerView mRecyclerView;
 
     private DishAdapter adapter;
+    private XiangqingFragment mXiangqingFragment;
     private RecyclerView.LayoutManager mManager;
 
     @Nullable
@@ -46,7 +47,15 @@ public class QitaFragment extends Fragment {
         mRecyclerView.setLayoutManager(mManager);
         adapter.addList(list, true);
         adapter.notifyDataSetChanged();
-
+        adapter.setOnItemClickListener(new DishAdapter.OnRecyclerViewItemClickListener() {
+            @Override
+            public void onItemClickListener(View view, int data) {
+                if (mXiangqingFragment == null) {
+                    mXiangqingFragment = new XiangqingFragment();
+                }
+                mXiangqingFragment.show(getFragmentManager(),"aaa");
+            }
+        });
         return view;
     }
 

@@ -30,6 +30,7 @@ public class CaipinFragment extends Fragment {
 
     private RecyclerView.LayoutManager mLayoutManager;
     private DishAdapter mAdapter;
+    private XiangqingFragment mXiangqingFragment;
 
 
     @Nullable
@@ -48,6 +49,18 @@ public class CaipinFragment extends Fragment {
 
         mAdapter.addList(list,true);
         mAdapter.notifyDataSetChanged();
+
+        mAdapter.setOnItemClickListener(new DishAdapter.OnRecyclerViewItemClickListener() {
+            @Override
+            public void onItemClickListener(View view, int data) {
+                if (mXiangqingFragment == null) {
+                    mXiangqingFragment = new XiangqingFragment();
+                }
+                mXiangqingFragment.show(getFragmentManager(),"aaa");
+            }
+
+
+        });
 
         return view;
     }

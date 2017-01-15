@@ -75,7 +75,7 @@
             android:text="退出账号"
             android:textSize="15sp"
             android:textColor="#fff"
-            android:background="#f39700"
+            android:background="@drawable/btn_biankuang"
             android:layout_marginBottom="5dp"
             />
     </LinearLayout>

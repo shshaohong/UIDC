@@ -32,6 +32,8 @@ public class LiangcaiFragment extends Fragment {
     private DishAdapter adapter;
     private RecyclerView.LayoutManager mManager;
 
+    private XiangqingFragment mXiangqingFragment;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,6 +49,17 @@ public class LiangcaiFragment extends Fragment {
         mRecyclerView.setLayoutManager(mManager);
         adapter.addList(list, true);
         adapter.notifyDataSetChanged();
+        adapter.setOnItemClickListener(new DishAdapter.OnRecyclerViewItemClickListener() {
+            @Override
+            public void onItemClickListener(View view, int data) {
+                if (mXiangqingFragment == null) {
+                    mXiangqingFragment = new XiangqingFragment();
+                }
+                mXiangqingFragment.show(getFragmentManager(),"aaa");
+            }
+
+
+        });
 
         return view;
     }

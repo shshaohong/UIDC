@@ -33,11 +33,11 @@ public class MyFragmentAdapter extends FragmentPagerAdapter {
                 return new JiezhangFragment();
             case 3:
                 return new GengduoFragment();
+//            case 4:
+//                return new HuantaiFragment();
+//            case 5:
+//                return new ShujuFragment();
             case 4:
-                return new DingdanFragment();
-            case 5:
-                return new DingdanFragment();
-            case 6:
                 return new DingdanFragment();
 
             default:
@@ -49,6 +49,6 @@ public class MyFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 7;
+        return 5;
     }
 }

@@ -29,6 +29,7 @@ public class YinliaoFragment extends Fragment {
     @BindView(R.id.rl_dish_yinliao)
     RecyclerView mRecyclerView;
 
+    private XiangqingFragment mXiangqingFragment;
     private DishAdapter adapter;
     private RecyclerView.LayoutManager mManager;
 
@@ -46,6 +47,18 @@ public class YinliaoFragment extends Fragment {
         mRecyclerView.setLayoutManager(mManager);
         adapter.addList(list, true);
         adapter.notifyDataSetChanged();
+        adapter.setOnItemClickListener(new DishAdapter.OnRecyclerViewItemClickListener() {
+            @Override
+            public void onItemClickListener(View view, int data) {
+                if (mXiangqingFragment == null) {
+                    mXiangqingFragment = new XiangqingFragment();
+                }
+                mXiangqingFragment.show(getFragmentManager(),"aaa");
+            }
+
+
+        });
+
 
         return view;
     }

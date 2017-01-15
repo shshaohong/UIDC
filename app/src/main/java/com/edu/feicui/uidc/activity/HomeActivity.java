@@ -62,10 +62,7 @@ public class HomeActivity extends FragmentActivity {
 
     @BindView(R.id.tv_gengduo_chakan)
     TextView tvChakan;
-    @BindView(R.id.tv_gengduo_huantai)
-    TextView tvHuantai;
-    @BindView(R.id.tv_gengduo_shujugengxin)
-    TextView tvShuju;
+
 
 
 
@@ -97,8 +94,6 @@ public class HomeActivity extends FragmentActivity {
         //功能类的fragment
         mViewPager2.setAdapter(mAdapter2);
         mViewPager2.addOnPageChangeListener(listener2);
-//        llCaipin.setSelected(true);
-
     }
 
     //菜栏的监听
@@ -135,9 +130,9 @@ public class HomeActivity extends FragmentActivity {
             llJindu.setSelected(position == 1);
             llJiezhang.setSelected(position == 2);
             llGengduo.setSelected(position == 3);
-            tvChakan.setSelected(position == 4);
-            tvChakan.setSelected(position == 5);
-            llDingdan.setSelected(position == 6);
+//            tvHuantai.setSelected(position == 4);
+//            tvShuju.setSelected(position == 5);
+            llDingdan.setSelected(position == 4);
         }
 
         @Override
@@ -197,7 +192,7 @@ public class HomeActivity extends FragmentActivity {
     //左边功能栏的点击事件
     @OnClick({R.id.ll_caipin, R.id.ll_jindu, R.id.ll_jiezhang,
             R.id.ll_gengduo, R.id.ll_dingdan,
-            R.id.tv_gengduo_huantai,R.id.tv_gengduo_shujugengxin
+            //R.id.tv_gengduo_huantai,R.id.tv_gengduo_shujugengxin
 
     })
     public void onClickGongneng(LinearLayout layout) {
@@ -229,18 +224,27 @@ public class HomeActivity extends FragmentActivity {
                 break;
             case R.id.ll_gengduo:
                 showGengduo();
+                tvChakan.setSelected(true);
                 setSelectedFormDish();
                 llGengduo.setSelected(true);
                 mViewPager.setVisibility(View.GONE);
                 mViewPager2.setVisibility(View.VISIBLE);
                 mViewPager2.setCurrentItem(3, false);
                 break;
-            case R.id.tv_gengduo_huantai:
-                mViewPager2.setCurrentItem(4,false);
-                break;
-            case R.id.tv_gengduo_shujugengxin:
-                mViewPager2.setCurrentItem(5,false);
-                break;
+//            case R.id.tv_gengduo_huantai:
+//                llGengduo.setSelected(true);
+//                tvHuantai.setSelected(true);
+//                tvChakan.setSelected(false);
+//                tvShuju.setSelected(false);
+//                mViewPager2.setCurrentItem(4,false);
+//                break;
+//            case R.id.tv_gengduo_shujugengxin:
+//                llGengduo.setSelected(true);
+//                tvHuantai.setSelected(false);
+//                tvChakan.setSelected(false);
+//                tvShuju.setSelected(true);
+//                mViewPager2.setCurrentItem(5,false);
+//                break;
 
             case R.id.ll_dingdan:
                 hideGandD();
@@ -299,7 +303,15 @@ public class HomeActivity extends FragmentActivity {
             mOutFragment = new OutFragment();
         }
         mOutFragment.show(getSupportFragmentManager(),"aa");
+    }
 
+    @OnClick(R.id.tv_gengduo_huantai)
+    public void onhuantai() {
+        Toast.makeText(this, "获取数据失败，请稍后再试", Toast.LENGTH_SHORT).show();
+    }
+    @OnClick(R.id.tv_gengduo_shujugengxin)
+    public void onshuju() {
+        Toast.makeText(this, "获取数据失败，请稍后再试", Toast.LENGTH_SHORT).show();
     }
 
 }

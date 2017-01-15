@@ -7,10 +7,10 @@
     >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="39dp"
+        android:layout_height="25dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         >
@@ -35,9 +35,10 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
         <Button
-            android:layout_width="50dp"
-            android:layout_height="30dp"
+            android:layout_width="38dp"
+            android:layout_height="20dp"
             android:text="刷新"
+            android:layout_gravity="center_vertical"
             android:background="@drawable/btnchakan"
             android:textSize="@dimen/textSize_12"
             android:layout_marginRight="15dp"

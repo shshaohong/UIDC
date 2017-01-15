@@ -30,6 +30,7 @@ public class TangleiFragment extends Fragment {
 
     private DishAdapter adapter;
     private RecyclerView.LayoutManager mManager;
+    private XiangqingFragment mXiangqingFragment;
 
     @Nullable
     @Override
@@ -45,7 +46,17 @@ public class TangleiFragment extends Fragment {
         mRecyclerView.setLayoutManager(mManager);
         adapter.addList(list, true);
         adapter.notifyDataSetChanged();
+        adapter.setOnItemClickListener(new DishAdapter.OnRecyclerViewItemClickListener() {
+            @Override
+            public void onItemClickListener(View view, int data) {
+                if (mXiangqingFragment == null) {
+                    mXiangqingFragment = new XiangqingFragment();
+                }
+                mXiangqingFragment.show(getFragmentManager(),"aaa");
+            }
 
+
+        });
         return view;
     }
 

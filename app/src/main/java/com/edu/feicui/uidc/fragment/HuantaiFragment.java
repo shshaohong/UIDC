@@ -19,6 +19,6 @@ public class HuantaiFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_huantai, container, false);
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
     }
 }
