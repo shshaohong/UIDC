@@ -10,15 +10,7 @@ public class MessageEvent {
     public static final int TYPE_B = 2;
 
     private int type;
-    private Dish mDish;
-
-    public Dish getDish() {
-        return mDish;
-    }
-
-    public void setDish(Dish dish) {
-        mDish = dish;
-    }
+    private String num;
 
     public int getType() {
         return type;
@@ -26,5 +18,13 @@ public class MessageEvent {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public String getNum() {
+        return num;
+    }
+
+    public void setNum(String num) {
+        this.num = num;
     }
 }

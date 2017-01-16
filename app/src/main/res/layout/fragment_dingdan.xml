@@ -33,7 +33,7 @@
             />
         <Button
             android:id="@+id/btn_tijiaodingdan"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="30dp"
             android:text="提交订单"
             android:background="@drawable/btnchakan"
@@ -58,7 +58,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.6"
                 android:layout_height="match_parent"
-                android:text="座号"
+                android:text="序号"
                 android:background="#f9f9f9"
                 android:gravity="center"
                 android:textSize="@dimen/textSize_12"
@@ -508,14 +508,15 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:orientation="horizontal"
             >
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="0.6"
                 android:layout_height="match_parent"
-                android:text="1"
+                android:text=""
                 android:background="#f9f9f9"
                 android:gravity="center"
                 android:textSize="@dimen/textSize_12"
@@ -524,7 +525,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1.6"
                 android:layout_height="match_parent"
-                android:text="辣炒么锦藕丁"
+                android:text=""
                 android:textSize="@dimen/textSize_12"
                 android:gravity="center"
 
@@ -533,7 +534,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.8"
                 android:layout_height="match_parent"
-                android:text="16.0"
+                android:text=""
                 android:textSize="@dimen/textSize_12"
                 android:background="#f9f9f9"
                 android:gravity="center"
@@ -545,32 +546,13 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 >
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/sanjiao_left"
-                    />
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="20dp"
-                    android:text="1"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="center"
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/btnchakan"
-                    />
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/sanjiao_right"
-                    />
 
             </LinearLayout>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="0.6"
                 android:layout_height="match_parent"
-                android:text="16.0"
+                android:text=""
                 android:gravity="center"
                 android:textSize="@dimen/textSize_12"
                 android:background="#f9f9f9"
@@ -579,7 +561,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="加酒"
+                android:text=""
                 android:gravity="center"
                 android:textSize="@dimen/textSize_12"
                 />
@@ -587,16 +569,16 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.8"
                 android:layout_height="match_parent"
-                android:text="热菜"
+                android:text=""
                 android:textSize="@dimen/textSize_12"
                 android:gravity="center"
                 android:background="#f9f9f9"
                 />
-            <ImageView
+            <TextView
                 android:layout_width="0dp"
                 android:layout_weight="0.8"
                 android:layout_height="20dp"
-                android:src="@drawable/iv_shanchu"
+                android:text=""
                 android:layout_gravity="center"
                 />
 
@@ -604,12 +586,90 @@
 
 
     </LinearLayout>
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#fff"
         android:layout_weight="1"
-        />
+        android:orientation="horizontal"
+        android:background="#fff"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="match_parent"
+            android:text=""
+            android:background="#f9f9f9"
+            android:gravity="center"
+            android:textSize="@dimen/textSize_12"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.6"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/textSize_12"
+            android:gravity="center"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/textSize_12"
+            android:background="#f9f9f9"
+            android:gravity="center"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="match_parent"
+            android:text=""
+            android:gravity="center"
+            android:textSize="@dimen/textSize_12"
+            android:background="#f9f9f9"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text=""
+            android:gravity="center"
+            android:textSize="@dimen/textSize_12"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/textSize_12"
+            android:gravity="center"
+            android:background="#f9f9f9"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="20dp"
+            android:text=""
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:background="#fff"-->
+        <!--android:layout_weight="1"-->
+        <!--/>-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="28dp"

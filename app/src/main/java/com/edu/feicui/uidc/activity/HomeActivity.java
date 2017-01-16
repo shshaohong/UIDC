@@ -11,7 +11,14 @@ import android.widget.Toast;
 import com.edu.feicui.uidc.R;
 import com.edu.feicui.uidc.adapter.MyFragment1Adapter;
 import com.edu.feicui.uidc.adapter.MyFragmentAdapter;
+import com.edu.feicui.uidc.entity.MessageEvent;
 import com.edu.feicui.uidc.fragment.OutFragment;
+import com.edu.feicui.uidc.fragment.RenshuFragment;
+import com.edu.feicui.uidc.fragment.TaihaoFragment;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -63,9 +70,10 @@ public class HomeActivity extends FragmentActivity {
     @BindView(R.id.tv_gengduo_chakan)
     TextView tvChakan;
 
-
-
-
+    @BindView(R.id.tai_hao)
+    TextView tvTaihao;
+    @BindView(R.id.ren_shu)
+    TextView tvRenshu;
 
     private MyFragmentAdapter mAdapter2;
     private MyFragment1Adapter adapter;
@@ -314,5 +322,51 @@ public class HomeActivity extends FragmentActivity {
         Toast.makeText(this, "获取数据失败，请稍后再试", Toast.LENGTH_SHORT).show();
     }
 
+    private RenshuFragment renshuFragment;
+    private TaihaoFragment taihaoFragment;
+    @OnClick(R.id.tai_hao)
+    public void setTvTaihao() {
+        if (renshuFragment == null) {
+            renshuFragment = new RenshuFragment();
+        }
+        renshuFragment.show(getSupportFragmentManager(),"ren");
+    }
+
+    @OnClick(R.id.ren_shu)
+    public void setTvRenshu() {
+        if (taihaoFragment == null) {
+            taihaoFragment = new TaihaoFragment();
+        }
+        taihaoFragment.show(getSupportFragmentManager(),"ren");
+    }
+
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void setRenshu(MessageEvent event) {
+        switch (event.getType()) {
+            case MessageEvent.TYPE_A:
+                String num = event.getNum();
+                tvTaihao.setText(num);
+                break;
+            case MessageEvent.TYPE_B:
+                String num1 = event.getNum();
+                tvRenshu.setText(num1);
+                break;
+        }
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
 }
 

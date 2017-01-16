@@ -38,6 +38,6 @@ public class XiangqingFragment extends DialogFragment {
     }
     @OnClick(R.id.btn_xiangqing)
     public void onbtn(){
-        Toast.makeText(getActivity(), "点菜成功", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "添加成功", Toast.LENGTH_SHORT).show();
     }
 }

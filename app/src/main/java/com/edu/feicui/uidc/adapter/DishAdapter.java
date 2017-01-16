@@ -77,7 +77,7 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.myViewHolder> 
         holder.BtnAddDish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext, "点菜成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "添加成功", Toast.LENGTH_SHORT).show();
 //                MessageEvent event = new MessageEvent();
 //                event.setType(MessageEvent.TYPE_A);
 //                event.setDish(dishEntity);

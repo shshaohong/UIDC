@@ -113,7 +113,7 @@ public class LoginActivity extends Activity {
                         editor1.commit();
 
                         if(isfirst){
-                            Intent intent = new Intent(LoginActivity.this,SetPasswordActivity.class);
+                            Intent intent = new Intent(LoginActivity.this,LeadActivity.class);
                             intent.putExtra("name", mName);
                             startActivity(intent);
                             finish();
@@ -154,6 +154,7 @@ public class LoginActivity extends Activity {
         progressDialog = ProgressDialog.show(this,null,"正在登录");
 //        progressDialog.setProgressStyle(android.R.style.);
         progressDialog.setCancelable(true);
+
         progressDialog.show();
     }
 
